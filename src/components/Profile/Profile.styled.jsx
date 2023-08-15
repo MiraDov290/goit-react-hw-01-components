@@ -2,14 +2,14 @@ import styled from 'styled-components';
 
 export const ProfileWrap = styled.div`
   width: 340px;
-  margin: 0 auto;
+  margin: auto;
   padding: 80px 60px;
   background-color: pink;
   border-radius: 10px;
 `;
 
 export const Description = styled.div`
-  width: 240px;
+  width: 190px;
   height: 220px;
   margin: 0 auto;
   padding: 30px;
@@ -44,10 +44,10 @@ export const Stats = styled.ul`
   height: 100px;
   background-color: rgba(128, 0, 111, 0.993);
   margin: 0 auto;
+  padding: initial;
   display: flex;
   justify-content: space-between;
   list-style-type: none;
-  border-radius: 10px;
 `;
 
 export const ListItem = styled.li`
