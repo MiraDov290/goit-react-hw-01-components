@@ -4,7 +4,7 @@ export const ProfileWrap = styled.div`
   width: 340px;
   margin: auto;
   padding: 80px 60px;
-  background-color: rgb(169, 169, 169);
+  background-color: #00802043;
   border-radius: 10px;
 `;
 
