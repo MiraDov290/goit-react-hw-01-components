@@ -4,7 +4,7 @@ export const ProfileWrap = styled.div`
   width: 340px;
   margin: auto;
   padding: 80px 60px;
-  background-color: pink;
+  background-color: rgb(169, 169, 169);
   border-radius: 10px;
 `;
 
@@ -25,7 +25,7 @@ export const Avatar = styled.img`
 
 export const Name = styled.p`
   text-align: center;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 24px;
   margin-bottom: 20px;
 `;
@@ -33,16 +33,18 @@ export const Name = styled.p`
 export const Tag = styled.p`
   text-align: center;
   margin-bottom: 15px;
+  color: darkgray;
 `;
 
 export const Location = styled.p`
   text-align: center;
+  color: darkgray;
 `;
 
 export const Stats = styled.ul`
   width: 302px;
   height: 100px;
-  background-color: rgba(128, 0, 111, 0.993);
+  background-color: gainsboro;
   margin: 0 auto;
   padding: initial;
   display: flex;
@@ -65,15 +67,16 @@ export const ListItem = styled.li`
 
 export const Label = styled.span`
   display: flex;
-  text-decoration: underline;
   align-items: center;
   justify-content: center;
    margin-bottom: 10px;
+   color: darkgray;
 `;
 
 export const Quantity = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 16px;
+
 `;
