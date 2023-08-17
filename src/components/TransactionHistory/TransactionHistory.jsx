@@ -1,29 +1,39 @@
-// import PropTypes from 'prop-types';
-// import { List } from './FriendList.styled';
+import PropTypes from 'prop-types';
+import { TransactionHistoryTable } from './TransactionHistory.styled';
 
-// const FriendList = ({ friends }) => {
-//   return (
-//   <List>
-//     {friends.map(({ avatar, name, isOnline, id }) => (
-//       <FriendListItem
-//         key={id}
-//         avatar={avatar}
-//         name={name}
-//         isOnline={isOnline}
-//       />
-//     ))}
-//   </List>
-// )};
+const TransactionHistory = ({ items }) => {
+  return (
+    <TransactionHistoryTable>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Amount</th>
+          <th>Currency</th>
+        </tr>
+      </thead>
 
-// FriendList.propTypes = {
-//   friends: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       avatar: PropTypes.string.isRequired,
-//       name: PropTypes.string.isRequired,
-//       isOnline: PropTypes.bool.isRequired,
-//       id: PropTypes.number.isRequired,
-//     })
-//   ).isRequired,
-// };
+      <tbody>
+        {items.map(({ id, type, amount, currency }) => (
+          <tr key={id}>
+            <td>{type}</td>
+            <td>{amount}</td>
+            <td>{currency}</td>
+          </tr>
+        ))}
+      </tbody>
+    </TransactionHistoryTable>
+  );
+};
 
-// export default FriendList;
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    })
+  )
+}
+
+export default TransactionHistory;

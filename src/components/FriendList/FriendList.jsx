@@ -5,26 +5,21 @@ import { List } from './FriendList.styled';
 const FriendList = ({ friends }) => {
   return (
   <List>
-    {friends.map(({ avatar, name, isOnline, id }) => (
-      <FriendListItem
-        key={id}
-        avatar={avatar}
-        name={name}
-        isOnline={isOnline}
-      />
-    ))}
+    {friends.map(({ id, avatar, name, isOnline }) => {
+                return (
+                    <FriendListItem
+                        key={id}
+                        status={isOnline}
+                        avatar={avatar}
+                        name={name}
+                    />);
+            })
+            }        
   </List>
 )};
 
 FriendList.propTypes = {
-  friends: PropTypes.arrayOf(
-    PropTypes.shape({
-      avatar: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      isOnline: PropTypes.bool.isRequired,
-      id: PropTypes.number.isRequired,
-    })
-  ).isRequired,
-};
+    friends: PropTypes.array
+}
 
 export default FriendList;
