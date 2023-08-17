@@ -22,7 +22,7 @@ const Statistics = ({ title, stats }) => {
           </StatItem>
         ))}
       </StatList>
-    </StatisticsSection>
+      </StatisticsSection>
   );
 };
 
